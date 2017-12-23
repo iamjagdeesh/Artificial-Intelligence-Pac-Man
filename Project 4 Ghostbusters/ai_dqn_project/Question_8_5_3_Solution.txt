@@ -1,0 +1,2 @@
+No,they don't appear to be accurate. 
+But for the most optimal action to be chosen for a given state, its corresponding q-value should be greater than the q-values of the remaining actions of the state.

@@ -1,0 +1,30 @@
+Question 5.2
+
+Graph: e_vs_episodeValue
+x-axis: Epsilon
+y-axis: Total reward value for the episode
+Inference:
+We initially start with a high epsilon value. This results in most of the actions chosen to be random. This explains why we have poor total rewarads at the end of each episode. 
+As we gradually decrease epsilon, we see that the actions chosen are the values obtained from the neural network. These actions tend to follow the optimal policy. 
+This explains why the value of total rewards increase as we gradually reduce epsilon during our training.
+
+
+Graph: large_e_value
+x-axis: Number of episodes
+y-axis: Total reward value for the episode
+Inference:
+This is the case where we do more exploration in comparison with exploitation. 
+In this case, we fix epsilon value to be 0.95 throughout the training period. This results in most of the actions chosen to be random. 
+The values that the neural network learns during the training is barely contributed for the calculation of the next action to be chosen.
+Hence, the values seen for the rewards are more or less random (and mostly sub-optimal owing to random actions being chosen).
+
+
+Graph: small_e_value
+x-axis: Number of episodes
+y-axis: Total reward value for the episode
+Inference:
+This is the case where we do more exploitation in comparison with exploration.
+In this case, we fix the epsilon value to be 0.05 throughout the training period. The results in most of the action to be chosen from the neural network predicted q values.
+This is a greedy approach where the network seems to learn the first most rewarding episode encountered.
+Hence, as seen in the graph, the initial reward values of the graph are fairly poor owing to the initial random values initialized in the network.
+But as we progress in the training, we see that the network learns to chose the optimal actions. This explains the increase in the reward values with the increase in the number of episodes.
